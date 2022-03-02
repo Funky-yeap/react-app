@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Sidebar from './components/TodoListSidebar';
+import Sidebar from './components/Main-Content/Sidebar/TodoListSidebar';
 import SelectedList from './components/Main-Content/Selected-List/SelectedList';
 import NewTaskForm from './components/Main-Content/NewTaskForm/NewTaskForm';
 

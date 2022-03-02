@@ -1,4 +1,7 @@
 import React from "react";
+
+import ToDoLists from "./ToDoLists";
+
 const Sidebar = (props) => {
     return (
         <div id="" className="main-block">
@@ -7,7 +10,9 @@ const Sidebar = (props) => {
             <ul id="todoLists">
                 {
                     props.listArray.map(element => {
-                    return (<li onclick="chooseList()">{element.name}</li>);
+                        return (
+                            <ToDoLists key={element.listid} list={element} />
+                        )
                     })
                 }
             </ul>

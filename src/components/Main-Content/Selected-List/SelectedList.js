@@ -8,7 +8,7 @@ const SelectedList = (props) => {
           {
             props.taskArray.map((element) => {
               return (
-                <ItemsFromSelectedList taskItem={element}/>
+                <ItemsFromSelectedList key={element.id} taskItem={element}/>
               )
             })
           }
