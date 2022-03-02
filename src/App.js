@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Sidebar from './components/TodoListSidebar';
-import SelectedList from './components/SelectedList';
-import NewTaskForm from './components/NewTaskForm';
+import SelectedList from './components/Main-Content/Selected-List/SelectedList';
+import NewTaskForm from './components/Main-Content/NewTaskForm/NewTaskForm';
 
 function App() {
   const list = {
@@ -10,23 +10,63 @@ function App() {
   }
   const listArray = [
     {
-      name: "List 1",
+      name: "CRUD",
       listid: 1
     },
     {
-      name: "List 2",
+      name: "Patch & Put",
       listid: 2
+    }
+  ]
+  const taskArray = [
+    {
+      id: 1,
+      name: "Create",
+      listid: 1,
+      description: "",
+      due_date: new Date()
     },
     {
-      name: "List 3",
-      listid: 3
+      id: 2,
+      name: "Read",
+      listid: 1,
+      description: "",
+      due_date: new Date()
+    },
+    {
+      id: 3,
+      name: "Update",
+      listid: 1,
+      description: "",
+      due_date: new Date()
+    },
+    {
+      id: 4,
+      name: "Delete",
+      listid: 1,
+      description: "",
+      due_date: new Date()
+    },
+    {
+      id: 5,
+      name: "PATCH",
+      listid: 2,
+      description: "",
+      due_date: new Date()
+    },
+    {
+      id: 6,
+      name: "PUT",
+      listid: 2,
+      description: "",
+      due_date: new Date()
     }
   ]
   return (
-    <div classNameName="App">
+    <div className="App">
       <Sidebar listArray={listArray}/>
       <div className="content-block">
-        <SelectedList listArray={listArray}/>
+        <SelectedList listArray={listArray} taskArray={taskArray}/>
         <NewTaskForm />
       </div>  
     </div>
