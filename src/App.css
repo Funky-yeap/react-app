@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+.hide-done .checked{
+  display: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-block {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  top: 0;
+  position: fixed;
+  background-color: #111;
+  height: 100%;
+}
+.main-block h1 {
+  color: #d17f0f;
+}
+.main-block h2 {
+  color: #f9f9f9;
+}
+.sort-block {
+  display: flex;
+  padding: 5px;
+}
+#sort-block {
+  color: #f9f9f9;
+}
+#sort-block button {
+  border-radius: 5px;
+  border-color: #f9f9f9;
+  padding: 5px;
+  margin: 6px;
+  background-color: #f9f9f9;
+  color: #555;
+}
+#sort-block button:hover {
+  color: #d17f0f;
+  border-color: #d17f0f;
+}
+#sort-block button.enabled {
+  border-color: #d17f0f;
+  background-color: #d17f0f;
+  color: #f9f9f9;
+}
+#sort-block button.disabled {
+  border-color: #63605b;
+  opacity: 0.7;
+  background-color: #63605b;
+  cursor: not-allowed;
+  color: #f9f9f9;
+}
+.content-block {
+  margin: 40px 0 0 300px;
+  padding-left: 2%;
+  width: 80%;
+}
+.input-container {
+  padding: 0 0 20px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.input-container input{
+  margin: 0;
+  border: none;
+  border-right: 3px solid #bbb;
+  border-radius: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.addBtn:hover {
+  color: #d17f0f;
 }
 
-.App-link {
-  color: #61dafb;
+ul#task-List {
+  height: 60vh;
+  margin: 20px 0;
+  list-style-type: none;
+  color: #f9f9f9;
+  font-size: 24px;
+  overflow: auto;
+}
+ul#todoLists {
+  height: 10vh;
+  width: 100%;
+  background-color: #bbb;
+  border-radius: 10px;
+  color: #f9f9f9;
+  overflow: auto;
+  margin: 40px 0;
+  padding: 10px;
+}
+ul#todoLists li{
+  padding: 10px 0 0 0;
+  width: 100%;
+  border-bottom: #555 solid 1px;
+}
+li.task {
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 20px 0;
+}
+li.task.checked, li.task.overdue.checked{
+  color:#f9f9f9;
+  background-color: #111;
+}
+li.task.checked h2, li.task.checked p, li.task.overdue.checked h2, li.task.overdue.checked p, li.task.overdue.checked p.date.overdue {
+  color:#f9f9f9;
+  text-decoration: line-through;
+}
+li.task.overdue {
+  color:#f9f9f9;
+  background-color: rgb(124, 22, 22);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head {
+  display: flex;
+  border-bottom: 3px dotted #bbb;
+}
+
+li.task .head h2 {
+  width: 97%;
+  padding-left: 10px;
+}
+li.task div.task-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 5px;
+}
+li.task p {
+  padding: 10px;
+}
+li.task.overdue p.date.overdue{
+  color: red;
+}
+input.chBox {
+  margin: 8px 0 0px 0;
 }

@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/TodoListSidebar';
+import SelectedList from './components/SelectedList';
+import NewTaskForm from './components/NewTaskForm';
 
 function App() {
+  const list = {
+    name: "List 1"
+  }
+  const listArray = [
+    {
+      name: "List 1",
+      listid: 1
+    },
+    {
+      name: "List 2",
+      listid: 2
+    },
+    {
+      name: "List 3",
+      listid: 3
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div classNameName="App">
+      <Sidebar listArray={listArray}/>
+      <div className="content-block">
+        <SelectedList listArray={listArray}/>
+        <NewTaskForm />
+      </div>  
     </div>
   );
 }
