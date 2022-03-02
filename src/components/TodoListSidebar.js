@@ -7,7 +7,7 @@ const Sidebar = (props) => {
             <ul id="todoLists">
                 {
                     props.listArray.map(element => {
-                    return (<li>{element.name}</li>);
+                    return (<li onclick="chooseList()">{element.name}</li>);
                     })
                 }
             </ul>

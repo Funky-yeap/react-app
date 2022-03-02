@@ -1,19 +1,19 @@
 import React from "react";
 
 const ItemsFromSelectedList = (props) => {
-    let listItem = (
+    console.log(props.taskItem.name);
+    return (
         <li className="task">
             <div className="head">
                 <input type="checkbox" className="chBox" onchange="setStatus(this)" />
-                <h2 className="title">11</h2>
+                <h2 className="title">{props.taskItem.name}</h2>
                 <a onclick="removeTask(this)">🗑️</a>
             </div>
             <div className="task-info">
-                <p className="description"></p>
-                <p className="date"></p>
-             </div>
+                <p className="description">{props.taskItem.description}</p>
+                <p className="date">{props.taskItem.due_date.toDateString()}</p>
+            </div>
         </li>
-    );
-    return listItem;
+    )
 }
 export default ItemsFromSelectedList;

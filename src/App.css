@@ -51,8 +51,6 @@
 }
 .content-block {
   margin: 40px 0 0 300px;
-  padding-left: 2%;
-  width: 80%;
 }
 .input-container {
   padding: 0 0 20px 23px;
@@ -86,7 +84,7 @@
 
 ul#task-List {
   height: 60vh;
-  margin: 20px 0;
+  margin: 20px 0 50px 0;
   list-style-type: none;
   color: #f9f9f9;
   font-size: 24px;
@@ -107,7 +105,15 @@ ul#todoLists li{
   width: 100%;
   border-bottom: #555 solid 1px;
 }
+ul#todoLists li:hover{
+  padding: 10px 0 0 0;
+  width: 100%;
+  background-color: rgb(71, 71, 71);
+  border-bottom: #555 solid 1px;
+  border-radius: 2px;
+}
 li.task {
+  color: #111;
   font-size: 16px;
   border-radius: 10px;
   background-color: #f9f9f9;
