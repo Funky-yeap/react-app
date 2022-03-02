@@ -62,12 +62,15 @@ function App() {
       due_date: new Date()
     }
   ]
+  function createNewTask (task) {
+    console.log(task);
+  }
   return (
     <div className="App">
       <Sidebar listArray={listArray}/>
       <div className="content-block">
         <SelectedList listArray={listArray} taskArray={taskArray}/>
-        <NewTaskForm />
+        <NewTaskForm onSubmit={createNewTask} />
       </div>  
     </div>
   );
