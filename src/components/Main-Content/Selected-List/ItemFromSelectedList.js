@@ -1,12 +1,14 @@
 import React from "react";
 
 const ItemsFromSelectedList = (props) => {
+    function setStatus(element) {}
+    function removeTask(element) {}
     return (
         <li className="task">
             <div className="head">
-                <input type="checkbox" className="chBox" onchange="setStatus(this)" />
+                <input type="checkbox" className="chBox" onChange={setStatus(this)}/>
                 <h2 className="title">{props.taskItem.name}</h2>
-                <a onclick="removeTask(this)">🗑️</a>
+                <a onClick={removeTask(this)}>🗑️</a>
             </div>
             <div className="task-info">
                 <p className="description">{props.taskItem.description}</p>
